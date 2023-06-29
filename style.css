@@ -1,5 +1,5 @@
 li {
-  color: rgb(0, 34, 255);
+  color: rgb(255, 255, 255);
 }
 
 h1{
@@ -11,4 +11,20 @@ h1{
 
 body{
   background-color: gray;
+}
+
+p.bse{
+  text-align: center;
+  font-weight: bold;
+}
+
+div.comecou{
+  text-align: center;
+  color: white;
+}
+
+a.canjics{
+  color: white;
+  text-decoration: none;
+  
 }
