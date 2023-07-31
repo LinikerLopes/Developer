@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 
+let data = new Date();
+
+let mensagemDoDia = require('./mensagemDoDia');
+
 app.get('/', (req, res) => {
-    res.send('A sennha é: SWORDFISH');
+    let dia = data.getDate();
+    let mensagemSelecionada = mensagemDoDia.retornarMensagemDoDia(dia);
+
+    res.json({mensagem: mensagemSelecionada});
 });
 
-app.listen(, () => {
-    let data = new Date();
-    console.log("Servidor node iniciado em " + data);
-});
+app.listen(3333, () => {
+    console.log('Servidor node iniciado em: ' + data);
+})

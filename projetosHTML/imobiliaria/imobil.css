@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(70, 243, 243);
+}
+
+.principal, div.terceiro{
+    background-color: white;
+    text-align: center;
+}
+
+.secundario img{
+    width: 1585px;
+    height: auto;
+    image-orientation: from-image;
+}
+.terceiro strong{
+    color: blue;
+}
+.quarto{
+    color: white;
+    text-align: center;
+}
+
+.quarto strong{
+    color: yellow;
+}
