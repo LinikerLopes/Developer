@@ -34,3 +34,7 @@ body{
     width: 300px;
     height: auto;
 }
+
+.principal, .secundario, .terceiro, .quarto, .quinto, .sexto{
+   padding: 1px;
+}
