@@ -2,7 +2,7 @@ body{
     background-color: rgb(70, 243, 243);
 }
 
-.principal, div.terceiro{
+.principal, div.terceiro, div.sexto{
     background-color: white;
     text-align: center;
 }
@@ -22,4 +22,15 @@ body{
 
 .quarto strong{
     color: yellow;
+}
+.quinto{
+    text-align: center;
+}
+.sexto{
+    text-align: center;
+}
+
+.principal img{
+    width: 300px;
+    height: auto;
 }
