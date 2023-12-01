@@ -1,15 +1,22 @@
 body{
     background-color: white;
 }
+/* TOPO FIXO*/
+header{
+    position: fixed;
+    z-index: 1;
+}
+/*TOPOFIXOEND*/
 .top{
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    position: relative;
+    position: fixed;
     background-color: rgb(189, 248, 248);
     width: 1890px;
     border-bottom: 1px solid;
     height: 90px;
+    z-index: 1;
 }
 .top-left img{
     width: 50px;
@@ -25,6 +32,8 @@ body{
     left: 1060px;
     bottom: 50px ;
 }
+
+/* TOPO END */
 .texttop{
     position: relative;
     left: 80px;
