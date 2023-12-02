@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckList de Estudos</title>
+    <style>
+        td, table{
+            border: 1px solid #333;
+        }
+        thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+    </style>
+</head>
+<body>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Teste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML <input type="checkbox" id="checkbox1"></td>
+                <td>CSS  <input type="checkbox" id="checkbox2"></td>
+                <td>JavaScript  <input type="checkbox" id="checkbox3"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Função para carregar e salvar o estado dos checkboxes
+        function handleCheckboxState(checkboxId) {
+          const checkbox = document.getElementById(checkboxId);
+    
+          // Verifica se há um valor armazenado no localStorage para este checkbox
+          const isChecked = localStorage.getItem(checkboxId) === 'true';
+    
+          // Define o estado do checkbox com base no valor armazenado
+          checkbox.checked = isChecked;
+    
+          // Adiciona um ouvinte de evento para mudanças no estado do checkbox
+          checkbox.addEventListener('change', function() {
+            // Armazena o estado atual do checkbox no localStorage
+            localStorage.setItem(checkboxId, checkbox.checked);
+          });
+        }
+    
+        // Chama a função para cada checkbox passando o ID
+        handleCheckboxState('checkbox1');
+        handleCheckboxState('checkbox2');
+        handleCheckboxState('checkbox3');
+      </script>
+
+<h4>Timer 1</h4>
+<label for="hours">Horas:</label>
+<input type="number" id="hours" value="0" min="0">
+
+<label for="minutes">Minutos:</label>
+<input type="number" id="minutes" value="0" min="0" max="59">
+
+<label for="seconds">Segundos:</label>
+<input type="number" id="seconds" value="0" min="0" max="59">
+
+<button onclick="startTimer()">Iniciar</button>
+<button onclick="stopTimer()">Parar</button>
+
+<p id="timerDisplay">Tempo restante: 00:00:00</p>
+
+<audio id="alarmSound" src="/projetosHTML/CheckList/e-o-pix-nada-ainda.mp3"></audio>
+
+<script>
+  let timer;
+  let totalSeconds = 0;
+
+  function startTimer() {
+    const hours = parseInt(document.getElementById('hours').value) || 0;
+    const minutes = parseInt(document.getElementById('minutes').value) || 0;
+    const seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+    totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+    if (totalSeconds > 0) {
+      timer = setInterval(updateTimer, 1000);
+    }
+  }
+
+  function updateTimer() {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    const displayHours = String(hours).padStart(2, '0');
+    const displayMinutes = String(minutes).padStart(2, '0');
+    const displaySeconds = String(seconds).padStart(2, '0');
+
+    document.getElementById('timerDisplay').textContent = `Tempo restante: ${displayHours}:${displayMinutes}:${displaySeconds}`;
+
+    if (totalSeconds === 0) {
+      clearInterval(timer);
+      document.getElementById('alarmSound').play();
+      alert('O tempo acabou!');
+    } else {
+      totalSeconds--;
+    }
+  }
+
+  function stopTimer() {
+    clearInterval(timer);
+    totalSeconds = 0;
+    document.getElementById('timerDisplay').textContent = 'Tempo restante: 00:00:00';
+    document.getElementById('alarmSound').pause();
+    document.getElementById('alarmSound').currentTime = 0;
+  }
+</script>
+</body>
+</html>
