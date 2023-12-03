@@ -1,0 +1,32 @@
+/* INFORMAÇÕES PRESENTES NESTE DOCUMENTO
+	- Document: Ponto do Refresco
+	- Version:  1.0.0
+	- Author:   A. CAVALLARO
+*/
+
+/* ===============
+   Estilos globais
+   =============== */
+
+body {
+   background-color: #df0909;
+}
+
+/* ===============
+   Menu de Navegação
+   =============== */
+
+.site-nav {
+    background-color: #f9f9ff;
+    list-style-type: none;
+
+}
+
+/* ===============
+   Main - Conteúdo principal
+   =============== */
+
+.bebida {
+    background-color: #f9f9ff;
+    list-style-type: none;
+}
