@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.topo{
+    border: 1px solid black;
+    padding: 35px 0px;
+    background-color: white;
+}
+
+.topo img{
+    width:3%;
+    position: relative;
+    top: 10px;
+    left: 400px;
+}
+.topo a{
+    position: relative;
+    bottom:10px;
+    left: 800px;
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.conteudo{
+    background-color: rgb(123, 123, 238);
+    color: white;
+    padding: 180px 0px;
+}
+.conteudo p{
+    position: relative;
+    bottom: 200px;
+    left: 400px;
+    
+}
+.conteudo img{
+    position: relative;
+    left: 1000px;
+}
+
+.tabelapreco{
+    border: 1px solid black;
+    background-color: rgb(6, 6, 185);
+    color: white;
+    padding: 40px 0px;
+}
+
+.tabelapreco a{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+}

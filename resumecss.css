@@ -1,0 +1,12 @@
+h1 {
+    position: relative;
+    text-align: center;
+}
+
+.dadospessoais{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: space-between;
+border: 1px solid green;
+border-radius: 10px;    
+}
