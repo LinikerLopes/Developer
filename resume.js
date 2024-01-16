@@ -1,4 +1,11 @@
-let num1 = 9.49;
+let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-aleatorio = 116 + 50 + 124.90 - 6;
-console.log(aleatorio);
+for( let contador = 0; contador < meses.length; contador++ ) {
+
+    console.log(meses[contador]);
+
+    if ( meses[contador] == "Abril" ) {
+        break;
+    }
+
+}
